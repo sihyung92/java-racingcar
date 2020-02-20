@@ -1,10 +1,12 @@
 package racingcar.domain;
 
 public class RacingCarGame {
-    public static boolean go(int number) {
-        if (number >= 4) {
-            return true;
+
+    public String makeBarByPosition(int position){
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0 ; i < position; i++) {
+            sb.append('-');
         }
-        return false;
+        return sb.toString();
     }
 }
