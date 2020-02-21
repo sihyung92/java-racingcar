@@ -12,10 +12,8 @@ public class WinnerTest {
     @DisplayName("우승자 이름 출력 test")
     @Test
     void 우승자_출력_테스트() {
-        Car car1 = new Car("a");
-        Car car2 = new Car("b");
-        Car car3 = new Car("c");
-        Winner winner = new Winner(new Cars(Arrays.asList(car1, car2, car3)));
+        String[] names = {"a","b","c"};
+        Winner winner = new Winner(new Cars(Arrays.asList(names)));
         assertThat(winner.getNames()).isEqualTo("a, b, c");
     }
 }
