@@ -2,19 +2,20 @@ package racingcar.domain;
 
 public class Car {
     private static final int GO_NUMBER = 4;
+    private static final int POSITION_INIT_NUMBER = 1;
     private int position;
     private String name;
 
-    public Car() {
-
-    }
-
     public Car(String name) {
         this.name = name;
+        position = POSITION_INIT_NUMBER;
     }
 
-    public int getPosition() {
-        return this.position;
+    public boolean isMaxPosition(int maxPosition) {
+        if (position == maxPosition) {
+            return true;
+        }
+        return false;
     }
 
     public void move(int random) {
@@ -24,5 +25,9 @@ public class Car {
 
     public String getName() {
         return this.name;
+    }
+
+    public int getPosition() {
+        return position;
     }
 }
