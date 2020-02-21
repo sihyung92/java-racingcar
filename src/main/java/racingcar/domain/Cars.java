@@ -15,9 +15,11 @@ public class Cars {
 
     public Winner findWinner() {
         int maxPosition = findMaxPosition();
-        for (Car c : cars) {
-            if (!c.isMaxPosition(maxPosition))
-                cars.remove(c);
+        for (int i = 0; i < cars.size(); i++) {
+            if (!cars.get(i).isMaxPosition(maxPosition)){
+                cars.remove(i);
+                i--;
+            }
         }
         return new Winner(this);
     }
