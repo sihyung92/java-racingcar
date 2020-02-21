@@ -31,7 +31,6 @@ public class InputViewTest {
                 .hasMessageContaining("비어있는 이름은 입력할 수 없습니다.");
     }
 
-
     @DisplayName("라운드 숫자 검사 (0이 아닌지)")
     @ParameterizedTest
     @ValueSource(ints = {0, 10})
